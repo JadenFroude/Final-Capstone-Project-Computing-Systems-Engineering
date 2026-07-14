@@ -1,0 +1,44 @@
+CREATE Database recommendation_database;
+
+CREATE TABLE ratings (
+    tconst VARCHAR(20) PRIMARY KEY,
+    averageRating NUMERIC(3,1),
+    numVotes INTEGER
+);
+
+CREATE TABLE movies (
+    tconst TEXT,
+    titleType TEXT,
+    primaryTitle TEXT,
+    originalTitle TEXT,
+    isAdult INTEGER,
+    startYear TEXT,
+    endYear TEXT,
+    runtimeMinutes TEXT,
+    genres TEXT
+ );
+
+CREATE TABLE principals (
+    tconst VARCHAR(20),
+    ordering INTEGER,
+    nconst VARCHAR(20),
+    category VARCHAR(100),
+    job TEXT,
+    characters TEXT
+);
+
+CREATE TABLE people (
+    nconst VARCHAR(20) PRIMARY KEY,
+    primaryName TEXT,
+    birthYear INTEGER,
+    deathYear INTEGER,
+    primaryProfession TEXT,
+    knownForTitles TEXT
+);
+
+
+
+#recommendation_database=# \copy movies FROM 'C:/Users/austi/OneDrive/Documents/Movie Database/title.basics.tsv' WITH (FORMAT csv, DELIMITER E'\t', HEADER true, NULL '\N', QUOTE E'\b', ENCODING 'UTF8');
+# recommendation_database=# \copy ratings FROM 'C:/Users/austi/OneDrive/Documents/Movie Database/title.ratings.tsv' WITH (FORMAT csv, DELIMITER E'\t', HEADER true, NULL '\N', QUOTE E'\b', ENCODING 'UTF8'); 
+#recommendation_database=# \copy people FROM 'C:/Users/austi/OneDrive/Documents/Movie Database/name.basics.tsv' WITH (FORMAT csv, DELIMITER E'\t', HEADER true, NULL '\N', QUOTE E'\b', ENCODING 'UTF8');
+#recommendation_database=# \copy principals FROM 'C:/Users/austi/OneDrive/Documents/Movie Database/title.principals.tsv' WITH (FORMAT csv, DELIMITER E'\t', HEADER true, NULL '\N', QUOTE E'\b', ENCODING 'UTF8');
