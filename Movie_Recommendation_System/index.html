@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMatch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <h1>🎬 CineMatch</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="search.html">Search</a>
+    <a href="#">Genres</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="tagline">Build your own recommendation algorithm</p>
+    <h2>Find Movies Your Way</h2>
+    <p class="hero-text">
+      Search by title, actor, genre, rating, and control how your movie recommendations are ranked.
+    </p>
+  </div>
+
+  <form class="search-box" action="search.html">
+    <div class="input-group">
+      <label>Movie Title</label>
+      <input type="text" placeholder="Search by title...">
+    </div>
+
+    <div class="input-group">
+      <label>Actor Name</label>
+      <input type="text" placeholder="Search by actor...">
+    </div>
+
+    <div class="filter-row">
+      <div class="input-group">
+        <label>Genre</label>
+        <select>
+          <option>Any Genre</option>
+          <option>Action</option>
+          <option>Comedy</option>
+          <option>Drama</option>
+          <option>Horror</option>
+          <option>Sci-Fi</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Year</label>
+        <select>
+          <option>Any Year</option>
+          <option>2020s</option>
+          <option>2010s</option>
+          <option>2000s</option>
+          <option>1990s</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Rating</label>
+        <select>
+          <option>Any Rating</option>
+          <option>7+</option>
+          <option>8+</option>
+          <option>9+</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit">Search Movies</button>
+  </form>
+</section>
+
+<section class="movie-section">
+  <h2>🔥 Trending Movies</h2>
+  <p class="section-subtitle">Homepage preview movies. Later these will come from your database.</p>
+
+  <div class="movie-grid">
+    <div class="movie-card">
+      <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar poster">
+      <h3>Interstellar</h3>
+      <p>⭐ 8.7 • Sci-Fi</p>
+    </div>
+
+    <div class="movie-card">
+      <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight poster">
+      <h3>The Dark Knight</h3>
+      <p>⭐ 9.0 • Action</p>
+    </div>
+
+    <div class="movie-card">
+      <img src="https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg" alt="Inception poster">
+      <h3>Inception</h3>
+      <p>⭐ 8.8 • Thriller</p>
+    </div>
+
+    <div class="movie-card">
+      <img src="https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg" alt="Avatar poster">
+      <h3>Avatar</h3>
+      <p>⭐ 7.9 • Adventure</p>
+    </div>
+
+    <div class="movie-card">
+      <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer poster">
+      <h3>Oppenheimer</h3>
+      <p>⭐ 8.4 • Biography</p>
+    </div>
+
+    <div class="movie-card">
+      <img src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Dune poster">
+      <h3>Dune</h3>
+      <p>⭐ 8.0 • Sci-Fi</p>
+    </div>
+
+    <div class="movie-card">
+      <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="The Batman poster">
+      <h3>The Batman</h3>
+      <p>⭐ 7.8 • Crime</p>
+    </div>
+
+    <div class="movie-card">
+      <img src="https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg" alt="Top Gun Maverick poster">
+      <h3>Top Gun: Maverick</h3>
+      <p>⭐ 8.2 • Action</p>
+    </div>
+  </div>
+</section>
+
+<section class="algorithm-section">
+  <h2>⚙️ Customize Your Algorithm</h2>
+  <p>Adjust the sliders to control what matters most when movies are recommended.</p>
+
+  <div class="slider-container">
+    <div class="slider-card">
+      <label>Genre Match <span>80%</span></label>
+      <input type="range" min="0" max="100" step="10" value="80">
+    </div>
+
+    <div class="slider-card">
+      <label>Actor Match <span>90%</span></label>
+      <input type="range" min="0" max="100" step="10" value="90">
+    </div>
+
+    <div class="slider-card">
+      <label>IMDb Rating <span>70%</span></label>
+      <input type="range" min="0" max="100" step="10" value="70">
+    </div>
+
+    <div class="slider-card">
+      <label>Release Year <span>40%</span></label>
+      <input type="range" min="0" max="100" step="10" value="40">
+    </div>
+
+    <div class="slider-card">
+      <label>Runtime <span>30%</span></label>
+      <input type="range" min="0" max="100" step="10" value="30">
+    </div>
+  </div>
+</section>
+
+<section class="genre-section">
+  <h2>🎭 Browse by Genre</h2>
+
+  <div class="genre-grid">
+    <button>Action</button>
+    <button>Comedy</button>
+    <button>Drama</button>
+    <button>Horror</button>
+    <button>Sci-Fi</button>
+    <button>Animation</button>
+    <button>Crime</button>
+    <button>Fantasy</button>
+  </div>
+</section>
+
+<section class="features">
+  <div>
+    <h3>🎯 User-Controlled Search</h3>
+    <p>Search by title, actor, genre, year, and rating.</p>
+  </div>
+
+  <div>
+    <h3>⚙️ Custom Algorithm</h3>
+    <p>Choose how important each recommendation factor is.</p>
+  </div>
+
+  <div>
+    <h3>🗄 Database Driven</h3>
+    <p>Movie data will be searched from your MySQL database.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 CineMatch | Database-Driven Movie Recommendation System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

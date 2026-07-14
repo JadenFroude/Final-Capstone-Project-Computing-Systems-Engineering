@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results | CineMatch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <h1>🎬 CineMatch</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="search.html">Search</a>
+    <a href="#">Genres</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<section class="results-hero">
+  <h2>Search Results</h2>
+  <p>Movies ranked using your selected filters and recommendation weights.</p>
+</section>
+
+<section class="results-layout">
+
+  <aside class="filter-panel">
+    <h3>Filters</h3>
+
+    <label>Movie Title</label>
+    <input type="text" placeholder="Search title...">
+
+    <label>Actor</label>
+    <input type="text" placeholder="Search actor...">
+
+    <label>Genre</label>
+    <select>
+      <option>Any Genre</option>
+      <option>Action</option>
+      <option>Comedy</option>
+      <option>Drama</option>
+      <option>Sci-Fi</option>
+    </select>
+
+    <label>Minimum Rating</label>
+    <select>
+      <option>Any Rating</option>
+      <option>7+</option>
+      <option>8+</option>
+      <option>9+</option>
+    </select>
+
+    <button>Apply Filters</button>
+  </aside>
+
+  <main class="results-content">
+    <div class="results-header">
+      <h2>Recommended Movies</h2>
+      <p>8 results found</p>
+    </div>
+
+    <div class="results-grid">
+
+      <div class="result-card">
+        <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar">
+        <div>
+          <h3>Interstellar</h3>
+          <p>⭐ 8.7 • 2014 • Sci-Fi</p>
+          <p>A team travels through a wormhole in search of a new home for humanity.</p>
+          <a href="movie.html">View Details</a>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight">
+        <div>
+          <h3>The Dark Knight</h3>
+          <p>⭐ 9.0 • 2008 • Action</p>
+          <p>Batman faces the Joker, a criminal mastermind causing chaos in Gotham.</p>
+          <a href="movie.html">View Details</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</section>
+
+<footer>
+  <p>© 2026 CineMatch | Database-Driven Movie Recommendation System</p>
+</footer>
+
+</body>
+</html>
