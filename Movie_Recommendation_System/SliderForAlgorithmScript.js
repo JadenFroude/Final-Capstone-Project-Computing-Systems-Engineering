@@ -1,17 +1,27 @@
-// Gets all slider cards on the page
-const sliderCards = document.querySelectorAll(".slider-card");
+document.addEventListener("DOMContentLoaded", () => {
+    const sliders = document.querySelectorAll(
+        '.slider-card input[type="range"]'
+    );
 
-sliderCards.forEach(card => {
+    sliders.forEach((slider) => {
+        const valueDisplay = slider
+            .closest(".slider-card")
+            .querySelector("label span");
 
-    const slider = card.querySelector("input[type='range']");
-    const value = card.querySelector("span");
+        function updateSlider() {
+            valueDisplay.textContent = `${slider.value}%`;
 
-    // Set the initial value
-    value.textContent = slider.value + "%";
+            slider.style.background = `linear-gradient(
+                to right,
+                #38bdf8 0%,
+                #38bdf8 ${slider.value}%,
+                #334155 ${slider.value}%,
+                #334155 100%
+            )`;
+        }
 
-    // Update while dragging
-    slider.addEventListener("input", () => {
-        value.textContent = slider.value + "%";
+        updateSlider();
+
+        slider.addEventListener("input", updateSlider);
     });
-
 });
